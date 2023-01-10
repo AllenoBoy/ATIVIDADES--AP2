@@ -1,2 +1,2 @@
-# ATIVIDADES--AP2
-Repositório com as atividades da disciplina de ap2
+# REPOSITÓRIO COM AS ATIVIDADES DE LABORATÓRIO DA DISCIPLINA DE AP2
+
