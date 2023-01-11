@@ -1,9 +1,9 @@
 /*
-  
+
   MIL PERDÕES PELA MA ORGANIZAÇÃO, MAS DÁ PRA ENTENDER UTILIZANDO O SWITCH QUE CHAMA AS FUNÇÕES.
-  
+
   .ENFIM SÓ COPIAR, COLAR E TESTAR DIRETAMENTE NA SUA IDE;
-  
+
 */
 
 // | BIBLIOTECAS UTILIZADAS | MOTIVO DO SEU USO
@@ -917,7 +917,7 @@ void quitProgram ()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-void main ()                              // main don't need to return nothing so let's just use void
+int main ()                              // main don't need to return nothing so let's just use void
 {
     system("CLS");                        // Clear Screen
     printf("\e[?25l");                    // Hide the cursor (the thing that keep blinking)
@@ -1053,5 +1053,5 @@ default: setbuf(stdin, NULL); main(); break; // Caso ocorra algum bug o usuário
 } // End Switch
 
 
-
-} // End Void
+ return 0;
+}
