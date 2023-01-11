@@ -1,9 +1,23 @@
-/*
+/*	INFORMAÇÕES DO CÓDIGO:
 
-  MIL PERDÕES PELA MA ORGANIZAÇÃO, MAS DÁ PRA ENTENDER UTILIZANDO O SWITCH QUE CHAMA AS FUNÇÕES.
-
-  .ENFIM SÓ COPIAR, COLAR E TESTAR DIRETAMENTE NA SUA IDE;
-
+!!! OBS.: O CÓDIGO NÃO ESTÁ REALMENTE ORGANIZADO! NAS PRÓXIMAS ATIVIDADES IREI DEIXAR O CÓDIGO MAIS LEGÍVEL. ENFIM, SÓ COPIAR, COLAR NA IDE E TESTAR!
+	
+	     ---------------------------------------------------------------------------------------------
+		Localização / Orientação (linha de código) 
+	     ---------------------------------------------------------------------------------------------
+		int main = linha  933
+		
+		exercício 1 (switch / menu interativo) = 	              linha  976
+		exercício 2 (PEGAR A DEZENA DE UM NÚMERO DE 3 CASAS) =        linha  217
+		exercício 3 (CONVERSÃO DE CELSIUS PARA KELVIN E FAHRENHEIT) = linha  252	
+		exercício 4 (SABER SE UM NÚMERO É UM TRIÂNGULO) = 	      linha  322
+		exercício 5 (CÁLCULO DE RENDA) = 			      linha  435
+		exercício 6 (TABELA ASCII USANDO WHILE) = 		      linha  393
+		exercício 7 (PESQUISA DO RU) = 				      linha   84
+		exercício 8 (MATRIZ 4X4) = 				      linha  666  😱😱😱😱😱😱😱😱😱😱😱😱
+		exercício 9 (QUADRADO MÁGICO) = 			      linha  757
+	     ---------------------------------------------------------------------------------------------
+	
 */
 
 // | BIBLIOTECAS UTILIZADAS | MOTIVO DO SEU USO
@@ -67,7 +81,7 @@ int kaj = 0, jak = 0; // GLOBAL LOOP CONTROL VARIABLE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest10 ()
+void quest10 () /* PESQUISA DO RU */
 {
 
     int curso, s = 0;
@@ -201,7 +215,7 @@ system("PAUSE > NULL");
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest2 ()
+void quest2 () /* PEGAR A DEZENA DE UM NÚMERO DE 3 CASAS */
 {
 
     int d2;
@@ -236,7 +250,7 @@ void quest2 ()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest3 ()
+void quest3 () /* CONVERSÃO DE CELSIUS PARA KELVIN E FAHRENHEIT */
 {
 
     int celsius = 0;
@@ -306,7 +320,7 @@ do {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest4 ()
+void quest4 () /* SABER SE UM NÚMERO É UM TRIÂNGULO */
 {
     /* 3 VALORES RECEBIDOS NA STDIN */
     int q4v1 = 0, q4v2 = 0, q4v3 = 0;
@@ -376,7 +390,7 @@ do {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest5 ()
+void quest5 () /* TABELA ASCII USANDO WHILE */
 {
     // VARIÁVEIS DO quest5
        int q5 = 0;
@@ -419,7 +433,7 @@ void quest5 ()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest6 ()  // CÁLCULO DE RENDA
+void quest6 ()  /* CÁLCULO DE RENDA */
 {
 
     int entry;
@@ -505,7 +519,7 @@ do
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest7 ()
+void quest7 () /* MAIOR NÚMERO DE UM VETOR E SUA POSIÇÃO */
 {
 
     char cq7;
@@ -649,7 +663,7 @@ void quest7 ()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest8 ()
+void quest8 () /* MATRIZ 4X4 */
 {
 
     int q8m [4] [4];
@@ -740,7 +754,7 @@ void quest8 ()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void quest9 ()
+void quest9 () /* QUADRADO MÁGICO */
 {
     int q9 [3] [3];      // matriz
     int ql9;             // linha
@@ -893,7 +907,7 @@ switch (iDoh)
 
 }
 
-void quitProgram ()
+void quitProgram () /* ENCERRAR O PROGRAMA */
 {
     Sleep(250);
     printf("\e[?25l");
