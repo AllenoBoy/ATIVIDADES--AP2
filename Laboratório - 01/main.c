@@ -174,9 +174,9 @@ float resultado_pessimo;
 
 // CONTINUANDO...
 
-printf("\n\n .O percentual de alunos da computa%c%co que acharam a refei%c%co excelente = %.1f", c_un, a_tB, c_un, a_tB, resultado_excelente);
-printf("\n .O percentual de alunos da matem%ctica que acharam a refei%c%co regular   = %.1f", a_aB, c_un, a_tB, resultado_regular);
-printf("\n .O percentual dos alunos da faculdade que acharam a refei%c%co p%cssima   = %.1f\n\n", c_un, a_tB, e_aB, resultado_pessimo);
+printf("\n\n .O percentual de alunos da computa%c%co que acharam a refei%c%co excelente = %.1f%%", c_un, a_tB, c_un, a_tB, resultado_excelente);
+printf("\n .O percentual de alunos da matem%ctica que acharam a refei%c%co regular   = %.1f%%", a_aB, c_un, a_tB, resultado_regular);
+printf("\n .O percentual dos alunos da faculdade que acharam a refei%c%co p%cssima   = %.1f%%\n\n", c_un, a_tB, e_aB, resultado_pessimo);
 
 for ( s = 0; s < 79; s++ ) printf("-");
 
