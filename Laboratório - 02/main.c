@@ -18,8 +18,7 @@
                      char c;                     // recebe getch
                      int control;                // recebe enter
                      int pos = 1;                // controla a posição
-                     bool tutorialIsSee = true;  // Exibe o tutorials
-
+                     bool tutorialIsSee = false; // exibe o tutorial
 
 
 // Acentuação DEFAULT:
