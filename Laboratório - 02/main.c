@@ -18,7 +18,7 @@
                      char c;                     // recebe getch
                      int control;                // recebe enter
                      int pos = 1;                // controla a posição
-                     bool tutorialIsSee = false;  // Exibe o tutorials
+                     bool tutorialIsSee = true;  // Exibe o tutorials
 
 
 
@@ -93,6 +93,28 @@ void gotoxy(int x, int y);
 void tutorial ();
 
 void colorChange (int color);   // permite atribuir cores em outras funções
+
+/* GABARITO FUNÇÃO colorChange (int color);
+
+    01 - BLACK
+    02 - BLUE
+    03 - GREEN
+    04 - CYAN
+    05 - RED
+    06 - MAGENTA
+    07 - BROWN
+    08 - LIGHT GRAY
+    09 - DARK GRAY
+    10 - LIGHT BLUE
+    11 - LIGHT GREEN
+    12 - LIGHT CYAN --> SUS
+    13 - LIGHT RED
+    14 - YELLOW --> This is not yellow, not here and not in CHINA
+    15 - WHITE
+*/
+
+
+
 
 
 
@@ -952,25 +974,59 @@ break;
 void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
 {
     // Variáveis do ex3
-    char ex3_string1 [20];
-    char ex3_string2 [20];
 
-    char ex3_resulta [20];
+    char ex3_string1 [512];    // NÃO VOU ALOCAR -> PC AGUENTA
+    char ex3_string2 [512];    // NÃO VOU ALOCAR -> PC AGUENTA
 
-    // Processo
+    char ex3_resulta [1024];
+
+    // DRAWN
+
     colorChange(4);
-    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
-    colorChange(3);
-    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
-    colorChange(2);
-    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
-    colorChange(1);
-    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
+    for ( kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+
+    printf("%c", drwBF); for ( kaj = 0; kaj < 52; kaj++) printf(" "); printf("%c", drwDA);
+    printf("%c", drwB3); colorChange(15); printf("     Concatena%c%co de 2 strings em uma terceira!     ", cd, at);    colorChange(4); printf("%c", drwB3);
+    printf("%c", drwB3); for ( kaj = 0; kaj < 52; kaj++) printf(" "); printf("%c", drwB3);
+    printf("%c", drwC0); for ( kaj = 0; kaj < 52; kaj++) printf("%c", drwC4); printf("%c\n", drwD9);
+
+    colorChange(15);
+
+    // SSSTART
+
+    printf("\n Insira a primeira string: \n\n ==> ");
+
+    colorChange(9);
+    scanf("%[^\n]", ex3_string1);
+    setbuf(stdin, NULL);
+    colorChange(15);
+
+    printf("\n Insira a segunda string: \n\n ==> ");
+    colorChange(12);
+    scanf("%[^\n]", ex3_string2);
+    setbuf(stdin, NULL);
+
+    printf("\n");
+
+    colorChange(4);
+    for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+    colorChange(15);
+
+    printf("\n\n *A concatena%c%co das 2 strings resultou em: \n\n==> ", cd, at);
+
+    strcat (ex3_string1, ex3_string2);  // Junta as 2
+    strcpy (ex3_resulta, ex3_string1);  // paste on ex3_resulta
+
+    colorChange(6);
+
+    printf("%s", ex3_resulta);
+
+
 
 
     // END
     colorChange(15);
-    printf("\n\n\n > Pressione qualquer tecla para continuar!");
+    printf("\n\n\n\n\n > Pressione qualquer tecla para continuar!");
     system("PAUSE > NULL");
     system("CLS");
 }
