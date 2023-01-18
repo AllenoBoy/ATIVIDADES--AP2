@@ -993,6 +993,9 @@ void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
     colorChange(15);
 
     // SSSTART
+    colorChange(2);
+    printf("\n USING <string.h>\n");
+    colorChange(15);
 
     printf("\n Insira a primeira string: \n\n ==> ");
 
@@ -1026,7 +1029,7 @@ void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
 
     // END
     colorChange(15);
-    printf("\n\n\n\n\n > Pressione qualquer tecla para continuar!");
+    printf("\n\n\n > Pressione qualquer tecla para continuar!");
     system("PAUSE > NULL");
     system("CLS");
 }
@@ -1075,6 +1078,7 @@ void QUESTAO_7 () // VERIFICAR SE UMA FRASE É PALÍNDROMA
 
 void QUESTAO_8 () // ADMIN E SENHA -> sem usar <string.h>
 {
+
     // END
     printf("\n\n\n > Pressione qualquer tecla para continuar!");
     system("PAUSE > NULL");
@@ -1195,5 +1199,4 @@ void colorChange (int color) // PERMITE ESTILIZAÇÃO DE FUNÇÕES FORA DA MAIN 
  SetConsoleTextAttribute(hConsole, color);
 
 }
-
 
