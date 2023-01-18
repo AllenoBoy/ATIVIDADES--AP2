@@ -18,7 +18,8 @@
                      char c;                     // recebe getch
                      int control;                // recebe enter
                      int pos = 1;                // controla a posição
-                     bool tutorialIsSee = false; // exibe o tutorial
+                     bool tutorialIsSee = true;  // Exibe o tutorials
+
 
 
 // Acentuação DEFAULT:
@@ -992,9 +993,6 @@ void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
     colorChange(15);
 
     // SSSTART
-    colorChange(2);
-    printf("\n USING <string.h>\n");
-    colorChange(15);
 
     printf("\n Insira a primeira string: \n\n ==> ");
 
@@ -1037,6 +1035,9 @@ void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
 
 void QUESTAO_4 () // ADMIN E SENHA -> usando <string.h>
 {
+
+
+
     // END
     printf("\n\n\n > Pressione qualquer tecla para continuar!");
     system("PAUSE > NULL");
