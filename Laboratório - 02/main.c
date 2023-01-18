@@ -18,7 +18,7 @@
                      char c;                     // recebe getch
                      int control;                // recebe enter
                      int pos = 1;                // controla a posição
-                     bool tutorialIsSee = true;  // Exibe o tutorials
+                     bool tutorialIsSee = false;  // Exibe o tutorials
 
 
 
@@ -765,20 +765,22 @@ do {
 
 void QUESTAO_2 () // EXIBIR O TAMANHO DE UMA STRING DIGITADA E A ESCREVER DE TRÁS PARA FRENTE
 {
+
     system("CLS");
+
     // Váriaveis Utilizadas
 
     char ex2_str [50];
-    int decision = 0;
     bool sair = false;
 
+    char fell;
+
     int size = 0;
-    decision = 0;
-    size = 0;
-    sair = false;
 
     // Print do que irá ser feito
 
+do {
+    system("CLS");
     colorChange(3);
 
     printf("\n %c", drwC9);
@@ -821,15 +823,12 @@ void QUESTAO_2 () // EXIBIR O TAMANHO DE UMA STRING DIGITADA E A ESCREVER DE TR�
     setbuf(stdin, NULL);
 
     size = strlen(ex2_str);
-    if (size >= 50 or size == 0) { QUESTAO_2 (); }
+
+} while ( size >= 50 or size <= 0 or ex2_str[0] == ' ' );
 
 
     printf("\e[?25l\n");
     colorChange(15);
-
-
-
-do {
 
     for ( kaj = 0; kaj < 54; kaj++ ) printf("%c", drwCD);
 
@@ -840,18 +839,23 @@ do {
     printf (" ==:> ");
     printf("\e[?25h");
 
-    scanf("%d", &decision);
-    setbuf(stdin, NULL);
-    printf("\e[?25l");
+    int controle_de_thing = 0;
 
-    if (decision == 1) { sair = true; }
-    if (decision == 2) { sair = true; }
+do {
 
-  } while ( sair == false );
+    fell = getch ();
 
-if (decision == 1)
+    if ( fell == '1' ) { controle_de_thing = 1; }
+    if ( fell == '2' ) { controle_de_thing = 2; }
+
+   } while ( controle_de_thing == 0 );
+
+switch (controle_de_thing)
 {
+case 1:
+
 system ("CLS");
+printf("\e[?25l");
 
     colorChange(1);
 
@@ -894,11 +898,14 @@ system ("CLS");
     system("PAUSE > NULL");
     system("CLS");
 
-}
+    sair = true;
 
-if (decision == 2)
-{
+break;
+
+case 2:
+
     system ("CLS");
+    printf("\e[?25l");
 
     colorChange(6);
     for ( kaj = 0; kaj < 54; kaj++ ) printf("%c", drwCD);
@@ -926,9 +933,11 @@ if (decision == 2)
     system("PAUSE > NULL");
     system("CLS");
 
+    sair = true;
+
+break;
+
 }
-
-
     colorChange(15);
 
 
@@ -942,7 +951,25 @@ if (decision == 2)
 
 void QUESTAO_3 () // CONCATENAÇÃO DE 2 STRINGS EM UMA TERCEIRA
 {
+    // Variáveis do ex3
+    char ex3_string1 [20];
+    char ex3_string2 [20];
+
+    char ex3_resulta [20];
+
+    // Processo
+    colorChange(4);
+    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
+    colorChange(3);
+    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
+    colorChange(2);
+    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
+    colorChange(1);
+    for (kaj = 0; kaj < 54; kaj++) printf("%c", drw9E);
+
+
     // END
+    colorChange(15);
     printf("\n\n\n > Pressione qualquer tecla para continuar!");
     system("PAUSE > NULL");
     system("CLS");
@@ -1112,6 +1139,5 @@ void colorChange (int color) // PERMITE ESTILIZAÇÃO DE FUNÇÕES FORA DA MAIN 
  SetConsoleTextAttribute(hConsole, color);
 
 }
-
 
 
