@@ -642,7 +642,7 @@ else if ( ex1_c == 8 and digitado != 0 )
 }
 
 /* ... Enquanto o usuário não apertar enter */
-} while ( ex1_c not_eq 13 );
+} while ( ex1_c not_eq 13 or digitado == 0 );
 
      /* Concatenação de strings -> Requisitado na atividade */
      ex1_str [ex1_kaj] = 0;
@@ -1091,6 +1091,10 @@ void QUESTAO_6 ()
      int j;
      int contador;
 
+     int check = 0;
+
+     char a = 'a';
+
      /* Corrigindo possíveis bugs */
      contador = 0;
      j = 0;
@@ -1122,6 +1126,7 @@ do
      printf("\e[?25h");
 
      colorChange(14);
+     system("CHCP 1252 > NULL"); /* BR */
      fgets(palavra, 20, stdin);
      setbuf(stdin, NULL);
 
@@ -1129,6 +1134,107 @@ do
     tamanho--;
 
 } while ( palavra [0] == ' ' or  tamanho == 0);
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+     /* PROCESSO DE FORMATAÇÃO DE ENTRADA */
+
+     system("CHCP 850 > NULL"); /* DEFAULT */
+     for ( kaj = 0; kaj < strlen (palavra); kaj++ )
+     {
+
+     // a
+     if ( palavra [kaj] == 'á' or palavra [kaj] == 'à' or palavra [kaj] == 'ã' or palavra [kaj] == 'â'  ) palavra [kaj] = 'a';
+     if ( palavra [kaj] == 'Á' or palavra [kaj] == 'À' or palavra [kaj] == 'Ã' or palavra [kaj] == 'Â' or palavra [kaj] == 'A'  ) palavra [kaj] = 'a';
+
+     // b
+     if ( palavra [kaj] == 'B' ) palavra [kaj] = 'b';
+
+     // c
+     if ( palavra [kaj] == 'C' ) palavra [kaj] = 'c';
+
+     // d
+     if ( palavra [kaj] == 'D' ) palavra [kaj] = 'd';
+
+     // e
+     if ( palavra [kaj] == 'é' or palavra [kaj] == 'è' or palavra [kaj] == 'ê' ) palavra [kaj] = 'e';
+     if ( palavra [kaj] == 'É' or palavra [kaj] == 'È' or palavra [kaj] == 'Ê' or palavra [kaj] == 'E' ) palavra [kaj] = 'e';
+
+     // f
+     if ( palavra [kaj] == 'F' ) palavra [kaj] = 'f';
+
+     // g
+     if ( palavra [kaj] == 'G' ) palavra [kaj] = 'g';
+
+     // h
+     if ( palavra [kaj] == 'H' ) palavra [kaj] = 'h';
+
+     // i
+     if ( palavra [kaj] == 'í' or palavra [kaj] == 'ì' or palavra [kaj] == 'î' ) palavra [kaj] = 'i';
+     if ( palavra [kaj] == 'Í' or palavra [kaj] == 'Ì' or palavra [kaj] == 'Î' or palavra [kaj] == 'I') palavra [kaj] = 'i';
+
+     // j
+     if ( palavra [kaj] == 'J' ) palavra [kaj] = 'j';
+
+     // k
+     if ( palavra [kaj] == 'K' ) palavra [kaj] = 'k';
+
+     // l
+     if ( palavra [kaj] == 'L' ) palavra [kaj] = 'l';
+
+     // m
+     if ( palavra [kaj] == 'M' ) palavra [kaj] = 'm';
+
+     // n
+     if ( palavra [kaj] == 'N' ) palavra [kaj] = 'n';
+
+     // o
+     if ( palavra [kaj] == 'ó' or palavra [kaj] == 'ò' or palavra [kaj] == 'õ' or palavra [kaj] == 'ô' ) palavra [kaj] = 'o';
+     if ( palavra [kaj] == 'Ó' or palavra [kaj] == 'Ò' or palavra [kaj] == 'Õ' or palavra [kaj] == 'Ô' or palavra [kaj] == 'O' ) palavra [kaj] = 'o';
+
+     // p
+     if ( palavra [kaj] == 'P' ) palavra [kaj] = 'p';
+
+     // q
+     if ( palavra [kaj] == 'Q' ) palavra [kaj] = 'q';
+
+     // r
+     if ( palavra [kaj] == 'R' ) palavra [kaj] = 'r';
+
+     // s
+     if ( palavra [kaj] == 'S' ) palavra [kaj] = 's';
+
+     // t
+     if ( palavra [kaj] == 'T' ) palavra [kaj] = 't';
+
+     // u
+     if ( palavra [kaj] == 'ú' or palavra [kaj] == 'ù' or palavra [kaj] == 'û' ) palavra [kaj] = 'u';
+     if ( palavra [kaj] == 'Ú' or palavra [kaj] == 'Ù' or palavra [kaj] == 'Û' or palavra [kaj] == 'U' ) palavra [kaj] = 'u';
+
+     // v
+     if ( palavra [kaj] == 'V' ) palavra [kaj] = 'v';
+
+     // w
+     if ( palavra [kaj] == 'W' ) palavra [kaj] = 'w';
+
+     // x
+     if ( palavra [kaj] == 'X' ) palavra [kaj] = 'x';
+
+     // y
+     if ( palavra [kaj] == 'Y' ) palavra [kaj] = 'y';
+
+     // z
+     if ( palavra [kaj] == 'Z' ) palavra [kaj] = 'z';
+
+     // ç
+     if ( palavra [kaj] == 'ç' ) palavra [kaj] = cd;
+     if ( palavra [kaj] == 'Ç' ) palavra [kaj] = cd;
+
+     } /* Fim da formatação */
+
+     palavra [kaj] = '\0';
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
      /* Checando se a palavra é palíndroma */
      for ( kaj = 0; kaj < strlen (palavra); kaj++ )
@@ -1212,6 +1318,7 @@ do
      printf("\e[?25h");
 
      colorChange(14);
+     system("CHCP 1252 > NULL");
      fgets(palavra, 20, stdin);
      setbuf(stdin, NULL);
 
@@ -1219,6 +1326,105 @@ do
     tamanho--;
 
 } while ( palavra [0] == ' ' or  tamanho == 0);
+
+     /* PROCESSO DE FORMATAÇÃO DE ENTRADA */
+
+     system("CHCP 850 > NULL"); /* DEFAULT */
+     for ( kaj = 0; kaj < strlen (palavra); kaj++ )
+     {
+
+     // a
+     if ( palavra [kaj] == 'á' or palavra [kaj] == 'à' or palavra [kaj] == 'ã' or palavra [kaj] == 'â'  ) palavra [kaj] = 'a';
+     if ( palavra [kaj] == 'Á' or palavra [kaj] == 'À' or palavra [kaj] == 'Ã' or palavra [kaj] == 'Â' or palavra [kaj] == 'A'  ) palavra [kaj] = 'a';
+
+     // b
+     if ( palavra [kaj] == 'B' ) palavra [kaj] = 'b';
+
+     // c
+     if ( palavra [kaj] == 'C' ) palavra [kaj] = 'c';
+
+     // d
+     if ( palavra [kaj] == 'D' ) palavra [kaj] = 'd';
+
+     // e
+     if ( palavra [kaj] == 'é' or palavra [kaj] == 'è' or palavra [kaj] == 'ê' ) palavra [kaj] = 'e';
+     if ( palavra [kaj] == 'É' or palavra [kaj] == 'È' or palavra [kaj] == 'Ê' or palavra [kaj] == 'E' ) palavra [kaj] = 'e';
+
+     // f
+     if ( palavra [kaj] == 'F' ) palavra [kaj] = 'f';
+
+     // g
+     if ( palavra [kaj] == 'G' ) palavra [kaj] = 'g';
+
+     // h
+     if ( palavra [kaj] == 'H' ) palavra [kaj] = 'h';
+
+     // i
+     if ( palavra [kaj] == 'í' or palavra [kaj] == 'ì' or palavra [kaj] == 'î' ) palavra [kaj] = 'i';
+     if ( palavra [kaj] == 'Í' or palavra [kaj] == 'Ì' or palavra [kaj] == 'Î' or palavra [kaj] == 'I') palavra [kaj] = 'i';
+
+     // j
+     if ( palavra [kaj] == 'J' ) palavra [kaj] = 'j';
+
+     // k
+     if ( palavra [kaj] == 'K' ) palavra [kaj] = 'k';
+
+     // l
+     if ( palavra [kaj] == 'L' ) palavra [kaj] = 'l';
+
+     // m
+     if ( palavra [kaj] == 'M' ) palavra [kaj] = 'm';
+
+     // n
+     if ( palavra [kaj] == 'N' ) palavra [kaj] = 'n';
+
+     // o
+     if ( palavra [kaj] == 'ó' or palavra [kaj] == 'ò' or palavra [kaj] == 'õ' or palavra [kaj] == 'ô' ) palavra [kaj] = 'o';
+     if ( palavra [kaj] == 'Ó' or palavra [kaj] == 'Ò' or palavra [kaj] == 'Õ' or palavra [kaj] == 'Ô' or palavra [kaj] == 'O' ) palavra [kaj] = 'o';
+
+     // p
+     if ( palavra [kaj] == 'P' ) palavra [kaj] = 'p';
+
+     // q
+     if ( palavra [kaj] == 'Q' ) palavra [kaj] = 'q';
+
+     // r
+     if ( palavra [kaj] == 'R' ) palavra [kaj] = 'r';
+
+     // s
+     if ( palavra [kaj] == 'S' ) palavra [kaj] = 's';
+
+     // t
+     if ( palavra [kaj] == 'T' ) palavra [kaj] = 't';
+
+     // u
+     if ( palavra [kaj] == 'ú' or palavra [kaj] == 'ù' or palavra [kaj] == 'û' ) palavra [kaj] = 'u';
+     if ( palavra [kaj] == 'Ú' or palavra [kaj] == 'Ù' or palavra [kaj] == 'Û' or palavra [kaj] == 'U' ) palavra [kaj] = 'u';
+
+     // v
+     if ( palavra [kaj] == 'V' ) palavra [kaj] = 'v';
+
+     // w
+     if ( palavra [kaj] == 'W' ) palavra [kaj] = 'w';
+
+     // x
+     if ( palavra [kaj] == 'X' ) palavra [kaj] = 'x';
+
+     // y
+     if ( palavra [kaj] == 'Y' ) palavra [kaj] = 'y';
+
+     // z
+     if ( palavra [kaj] == 'Z' ) palavra [kaj] = 'z';
+
+     // ç
+     if ( palavra [kaj] == 'ç' ) palavra [kaj] = cd;
+     if ( palavra [kaj] == 'Ç' ) palavra [kaj] = cd;
+
+     } /* Fim da formatação */
+
+     palavra [kaj] = '\0';
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
      /* Checando se a palavra é palíndroma */
      for ( kaj = 0; kaj < tamanho; kaj++ )
