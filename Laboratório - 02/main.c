@@ -1174,6 +1174,7 @@ void QUESTAO_7 ()
      /* Variáveis utilizadas */
      char palavra [256];
      char copia [256];
+     char inverted [256];
 
      int tamanho;
      int i;
@@ -1220,7 +1221,45 @@ do
 } while ( palavra [0] == ' ' or  tamanho == 0);
 
      /* Checando se a palavra é palíndroma */
+     for ( kaj = 0; kaj < tamanho; kaj++ )
+     {
+     if ( palavra [kaj] == ' ' ) continue;
 
+     copia [j] = palavra [kaj];
+     j++;
+     }
+
+     copia [j] = '\0';
+
+     tamanho = strlen (copia);
+     tamanho--;
+     j = 0;
+
+     for ( kaj = tamanho; kaj >= 0; kaj--)
+     {
+         inverted [j] = copia [kaj];
+         j++;
+     }
+
+     inverted [j] = '\0';
+
+     for ( kaj = 0; kaj < strlen (copia); kaj++ )
+     {
+           if ( copia [kaj] not_eq inverted [kaj] )
+           contador++;
+     }
+
+     /* Mostrando o resultado */
+     colorChange (7);
+     printf("\n");
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB0);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+
+
+     if ( contador == 0 ) printf ("\n\n\t\tA frase %c palindroma!", ea);
+     else printf ("\n\n\t      A frase n%co %c palindroma!", at, ea);
 
 /* Fim da função */
 colorChange(15);
