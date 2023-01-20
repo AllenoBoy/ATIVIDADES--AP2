@@ -1005,8 +1005,75 @@ system("CLS");
 
 void QUESTAO_5 ()
 {
+
+     /* Variáveis utilizadas */
+     char string_5 [256];
+     int validar;
+     int vogais;
+     int tamanhoreal;
+
+     /* Evitar possíveis erros */
+     validar = 0;
+     vogais = 0;
+     tamanhoreal = 0;
+do
+{
+     /* Desenhando as informações iniciais dessa função */
+     system("CLS");
+     colorChange(1);
+     printf("\n %c", drwDA);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwBF);
+     printf(" %c", drwB3);
+
+     colorChange(6);
+     printf ("  Checando a frase procurando todas as vogais 'a'", aa);
+
+     colorChange(1);
+     printf(" %c", drwB3);
+     printf("  %c", drwC0);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwD9);
+
+     /* Recebendo o Stdin do Usuário */
+     colorChange(4);
+     printf("\n *Somente a vogal 'a' na caixa baixa %c contada!", ea);
+
+     colorChange(7);
+     printf("\n\n - Escreva alguma frase para o sistema checar: \n\n==> ", ea);
+     printf("\e[?25h");
+
+     colorChange(14);
+     fgets (string_5, sizeof(string_5), stdin);
+     setbuf(stdin, NULL);
+
+     validar = strlen (string_5);
+     tamanhoreal = strlen (string_5);
+     validar--;
+
+} while ( validar == 0 or string_5 [0] == ' ' );
+
+     /* Verificando quantas vogais 'a' foram escritas */
+     for ( kaj = 0; kaj < 255; kaj++ )
+     {
+     if ( string_5 [kaj] == 'a' ) { vogais++; }
+     }
+
+     /* Printando a quantidade total da vogal a */
+     colorChange (7);
+     printf("\n");
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB0);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+     colorChange (14);
+
+     printf ("\n\n Quantidade de vogais 'a' = %d", vogais );
+
+
 /* Fim da função */
-printf("\n\n\n > Pressione qualquer tecla para continuar!");
+colorChange(15);
+printf("\n\n\n\n\n\n\n\n\n\n\n > Pressione qualquer tecla para continuar!");
 system("PAUSE > NULL");
 system("CLS");
 }
