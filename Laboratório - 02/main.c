@@ -417,8 +417,8 @@ if ( pos == 9 )
       setbuf(stdin, NULL);
 
    /* Verificações do Stdin */
-      if ( c == 72 or c == 119 ) { pos--; } /* Seta para cima ou W */
-      if ( c == 80 or c == 115 ) { pos++; } /* Seta para baixo ou s */
+      if ( c == 72 or c == 119 or c == 87 ) { pos--; } /* Seta para cima ou W */
+      if ( c == 80 or c == 115 or c == 83 ) { pos++; } /* Seta para baixo ou s */
       if ( pos == 0  ) { pos = 9; }
       if ( pos == 10 ) { pos = 1; }
 
