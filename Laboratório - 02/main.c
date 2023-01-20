@@ -68,6 +68,7 @@
     /* Blocos */
     int drwB0 = 176;
     int drwDB = 219;
+    int drwB2 = 178;
 
     /* Setas */
     int setaC = 24;
@@ -900,8 +901,100 @@ system("CLS");
 
 void QUESTAO_4 ()
 {
+     /* Variáveis utilizadas */
+     char user [10];
+     char pass [10];
+
+     int valid2 = 0;
+     int valid1 = 0;
+
+     /* Desenhando o paínel de login */
+     colorChange (9);
+     for (kaj = 0; kaj < 54 * 2; kaj++) printf("%c", drwB2);
+
+     colorChange (1);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+     printf("\n\n");
+
+     colorChange (2);
+     printf(" \t\t   %c", drwDA);
+     for (kaj = 0; kaj < 13; kaj++) printf("%c", drwC4);
+     printf("%c\n \t\t   ", drwBF);
+     printf("%c", drwB3);
+
+     colorChange (7);
+     printf (" UFJ - SIGAA ");
+
+     colorChange (2);
+     printf("%c\n", drwB3);
+     printf(" \t\t   %c", drwC0);
+     for (kaj = 0; kaj < 13; kaj++) printf("%c", drwC4);
+     printf("%c\n\n", drwD9);
+
+     colorChange (5);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+
+     colorChange (13);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwDB);
+
+     colorChange (5);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+     printf("\n *Para logar insira seu usu%crio e senha;\n", aa);
+
+        /* Usuário */
+        colorChange (7);
+        printf ("\n Usu%crio: ", aa);
+
+        colorChange (12);
+        printf("\e[?25h");
+        scanf("%[^\n]", user);
+        setbuf(stdin, NULL);
+
+        /* Senha */
+        colorChange (7);
+        printf ("\n Senha: ");
+
+        colorChange (12);
+        printf("\e[?25h");
+        scanf("%[^\n]", pass);
+        setbuf(stdin, NULL);
+
+        /* Requisitado no exercício - Comparação */
+        valid1 = strcmp (user, "admin");
+        valid2 = strcmp (pass, "a1b2C3");
+
+/* Executando o que foi decidido */
+if ( valid1 == 0 && valid2 == 0 )
+{
+                 colorChange (7);
+                 printf("\n");
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB0);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+                 colorChange (10);
+                 printf("\n\n\t Olha voc%c teve o acesso concedido!\n", ec);
+}
+
+else
+{
+                 colorChange (4);
+                 printf("\n");
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB0);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+                 colorChange (14);
+                 printf("\n\n\t     Voc%c n%co conseguiu acessar!\n", ec, at);
+}
+
+
+
+
+
 /* Fim da função */
-printf("\n\n\n > Pressione qualquer tecla para continuar!");
+colorChange (15);
+printf("\n\n\n\n > Pressione qualquer tecla para continuar!");
 system("PAUSE > NULL");
 system("CLS");
 }
@@ -948,8 +1041,133 @@ system("CLS");
 
 void QUESTAO_8 ()
 {
+     /* Variáveis utilizadas */
+     char usuario [10];
+     char senha [10];
+
+     char user_v [10] = "admin";
+     char pass_v [10] = "a1b2C3";
+
+     int contadoru;
+     int contadorp;
+
+     bool permitido;
+
+     /* Impedindo bugs */
+     permitido = false;
+     contadoru = 0;
+     contadorp = 0;
+
+     /* Desenhando o paínel de login */
+     colorChange (4);
+     for (kaj = 0; kaj < 54 * 2; kaj++) printf("%c", drwB2);
+
+     colorChange (2);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+     printf("\n\n");
+     printf(" \t\t   %c", drwDA);
+     for (kaj = 0; kaj < 13; kaj++) printf("%c", drwC4);
+     printf("%c\n \t\t   ", drwBF);
+     printf("%c", drwB3);
+
+     colorChange (14);
+     printf (" UFJ - SIGAA ");
+
+     colorChange (2);
+     printf("%c\n", drwB3);
+     printf(" \t\t   %c", drwC0);
+     for (kaj = 0; kaj < 13; kaj++) printf("%c", drwC4);
+     printf("%c\n\n", drwD9);
+
+     colorChange (4);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+
+     colorChange (2);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwDB);
+
+     colorChange (4);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+
+     colorChange (14);
+     printf("\n *Para logar insira seu usu%crio e senha;\n", aa);
+
+        /* Usuário */
+        colorChange (9);
+        printf ("\n Usu%crio: ", aa);
+
+        colorChange (10);
+        printf("\e[?25h");
+        scanf("%[^\n]", usuario);
+        setbuf(stdin, NULL);
+
+        /* Senha */
+        colorChange (9);
+        printf ("\n Senha: ");
+
+        colorChange (10);
+        printf("\e[?25h");
+        scanf("%[^\n]", senha);
+        setbuf(stdin, NULL);
+
+        /* Requisitado no exercício - Verificando a compatibilidade */
+
+        /* Verificando o usuário */
+        for ( kaj = 0; kaj < 10; kaj++ )
+        {
+        if ( usuario[kaj] == '\0' ) { break; }
+
+        if ( usuario [kaj] == user_v [kaj] )
+        {
+             contadoru++;
+        }
+        }
+
+        /* Verificando a senha */
+        for ( kaj = 0; kaj < 10; kaj++ )
+        {
+        if ( senha [kaj] == '\0' ) { break; }
+
+        if ( senha [kaj] == pass_v [kaj] )
+        {
+             contadorp++;
+        }
+        }
+
+        /* Finalizando para definir se o user pode entrar ou não */
+        if ( contadoru == 5 && contadorp == 6 ) { permitido = true; }
+
+/* Executando o que foi decidido */
+if ( permitido == false )
+{
+                 colorChange (2);
+                 printf("\n");
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB2);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwC4);
+
+                 colorChange (12);
+                 printf("\n\n\t     Voc%c n%co conseguiu acessar!\n", ec, at);
+}
+
+if ( permitido == true )
+{
+                 colorChange (7);
+                 printf("\n");
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB2);
+                 for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+                 colorChange (10);
+                 printf("\n\n\t Olha voc%c teve o acesso concedido!\n", ec);
+}
+
+
+
+
+
 /* Fim da função */
-printf("\n\n\n > Pressione qualquer tecla para continuar!");
+colorChange (15);
+printf("\n\n\n\n > Pressione qualquer tecla para continuar!");
 system("PAUSE > NULL");
 system("CLS");
 }
