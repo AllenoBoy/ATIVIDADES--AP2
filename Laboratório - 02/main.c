@@ -1005,7 +1005,6 @@ system("CLS");
 
 void QUESTAO_5 ()
 {
-
      /* Variáveis utilizadas */
      char string_5 [256];
      int validar;
@@ -1084,8 +1083,84 @@ system("CLS");
 
 void QUESTAO_6 ()
 {
+     /* Variáveis utilizadas */
+     char palavra [20];
+     char copia [20];
+
+     int tamanho;
+     int j;
+     int contador;
+
+     /* Corrigindo possíveis bugs */
+     contador = 0;
+     j = 0;
+     tamanho = 0;
+
+     /* Evitar possíveis erros */
+do
+{
+     /* Desenhando as informações iniciais dessa função */
+     system("CLS");
+     colorChange(1);
+     printf("\n %c", drwDA);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwBF);
+     printf(" %c", drwB3);
+
+     colorChange(6);
+     printf (" Checando a palavra para ver se ela %c palindromo!", ea);
+
+     colorChange(1);
+     printf(" %c", drwB3);
+     printf("  %c", drwC0);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwD9);
+
+     /* Recebendo o Stdin do Usuário */
+     colorChange(7);
+     printf("\n\n - Escreva alguma palavra de at%c 20 caracteres: \n\n==> ", ea);
+     printf("\e[?25h");
+
+     colorChange(14);
+     fgets(palavra, 20, stdin);
+     setbuf(stdin, NULL);
+
+    tamanho = strlen (palavra);
+    tamanho--;
+
+} while ( palavra [0] == ' ' or  tamanho == 0);
+
+     /* Checando se a palavra é palíndroma */
+     for ( kaj = 0; kaj < strlen (palavra); kaj++ )
+     {
+     copia [kaj] = palavra [tamanho - 1];
+     tamanho--;
+     }
+
+     tamanho = strlen (palavra);
+     tamanho--;
+
+     for ( kaj = 0; kaj < tamanho; kaj++ )
+     {
+         if ( palavra [kaj] == copia [kaj] ) { contador++; }
+     }
+
+     /* Printando a confirmação */
+     colorChange (7);
+     printf("\n");
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwB0);
+     for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
+
+     colorChange (14);
+
+     if ( tamanho == contador ) printf("\n\n A palavra %c palindroma!", ea);
+     else printf("\n\n A palavra n%co %c palindroma!", at, ea);
+
+
 /* Fim da função */
-printf("\n\n\n > Pressione qualquer tecla para continuar!");
+colorChange(15);
+printf("\n\n\n\n\n\n\n\n\n\n\n > Pressione qualquer tecla para continuar!");
 system("PAUSE > NULL");
 system("CLS");
 }
@@ -1096,8 +1171,60 @@ system("CLS");
 
 void QUESTAO_7 ()
 {
+     /* Variáveis utilizadas */
+     char palavra [256];
+     char copia [256];
+
+     int tamanho;
+     int i;
+     int j;
+     int contador;
+
+     /* Corrigindo possíveis bugs */
+     contador = 0;
+     tamanho = 0;
+     j = 0;
+
+     /* Evitar possíveis erros */
+do
+{
+     /* Desenhando as informações iniciais dessa função */
+     system("CLS");
+     colorChange(1);
+     printf("\n %c", drwDA);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwBF);
+     printf(" %c", drwB3);
+
+     colorChange(6);
+     printf ("  Checando a frase escrita para %c um palindromo! ", ea);
+
+     colorChange(1);
+     printf(" %c", drwB3);
+     printf("  %c", drwC0);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwC4);
+     printf("%c ", drwD9);
+
+     /* Recebendo o Stdin do Usuário */
+     colorChange(7);
+     printf("\n\n - Escreva alguma frase: \n\n==> ", ea);
+     printf("\e[?25h");
+
+     colorChange(14);
+     fgets(palavra, 20, stdin);
+     setbuf(stdin, NULL);
+
+    tamanho = strlen (palavra);
+    tamanho--;
+
+} while ( palavra [0] == ' ' or  tamanho == 0);
+
+     /* Checando se a palavra é palíndroma */
+
+
 /* Fim da função */
-printf("\n\n\n > Pressione qualquer tecla para continuar!");
+colorChange(15);
+printf("\n\n\n\n\n\n\n\n\n\n\n > Pressione qualquer tecla para continuar!");
 system("PAUSE > NULL");
 system("CLS");
 }
