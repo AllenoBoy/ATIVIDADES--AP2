@@ -22,7 +22,7 @@
                      char c;
                      int control;
                      int pos = 1;
-                     bool tutorialIsSee = false;
+                     bool tutorialIsSee = true;
                      int questions = 1;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -823,7 +823,7 @@ sair = true;
      break;
 
 } /* Fim do switch das 2 opções */
-     colorChange(15);
+  colorChange(15);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -859,16 +859,21 @@ void QUESTAO_3 ()
      printf("\n Insira a primeira string: \n\n ==> ");
 
      colorChange(9);
+     printf("\e[?25h");
      scanf("%[^\n]", ex3_string1);
      setbuf(stdin, NULL);
+     printf("\e[?25l");
 
      colorChange(15);
      printf("\n Insira a segunda string: \n\n ==> ");
 
      colorChange(12);
+     printf("\e[?25h");
      scanf("%[^\n]", ex3_string2);
      setbuf(stdin, NULL);
+     printf("\e[?25l");
      printf("\n");
+
 
      colorChange(4);
      for (kaj = 0; kaj < 54; kaj++) printf("%c", drwCD);
@@ -1036,7 +1041,51 @@ system("CLS");
 
 void encerrando ()
 {
+
+     /* Correção de cor do plano de fundo */
      system("CLS");
+     colorChange(0);
+     for ( kaj = 0; kaj < 54 * 31; kaj++ ) printf("%c", drwDB);
+
+     /* Desenhando o fim do programa */
+     colorChange(5);
+     gotoxy (0, 0);
+     printf("\n %c", drwC9);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwCD);
+     printf("%c\n", drwBB);
+     printf(" %c", drwBA);
+     for (kaj = 0; kaj < 50; kaj++) printf(" ");
+     printf("%c\n", drwBA);
+     printf(" %c", drwBA);
+     for (kaj = 0; kaj < 50; kaj++) printf(" ");
+     printf("%c\n", drwBA);
+     printf(" %c", drwBA);
+
+     colorChange(2);
+     for (kaj = 0; kaj < 12; kaj++) printf(" ");
+     printf(" !OBRIGADO POR ME TESTAR! ");
+     for (kaj = 0; kaj < 12; kaj++) printf(" ");
+
+     colorChange(5);
+     printf("%c\n", drwBA);
+     printf(" %c", drwBA);
+     for (kaj = 0; kaj < 50; kaj++) printf(" ");
+     printf("%c\n", drwBA);
+     printf(" %c", drwBA);
+     for (kaj = 0; kaj < 50; kaj++) printf(" ");
+     printf("%c\n", drwBA);
+     printf(" %c", drwC8);
+     for (kaj = 0; kaj < 50; kaj++) printf("%c", drwCD);
+     printf("%c\n ", drwBC);
+
+
+/* Fim da função */
+colorChange(15);
+gotoxy (1, 25);
+for ( kaj = 0; kaj < 52; kaj++ ) printf("%c", drwCD);
+printf("\n > Pressione qualquer tecla para continuar!");
+system("PAUSE > NULL");
+printf("\n");
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1062,5 +1111,4 @@ void colorChange (int color)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/* Running Memory Requisited by this code = */
 // END OF FILE
