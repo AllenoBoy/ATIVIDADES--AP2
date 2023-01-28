@@ -22,6 +22,10 @@
 
 - Saída do Console: 
 
+<p align="center">
+  <img width="369" height="410" src="https://user-images.githubusercontent.com/114815898/215294615-e55a42b4-cd61-4a5a-8abd-2c2d32c10853.png">
+</p>
+
 ---
 
 # Questão 05:
