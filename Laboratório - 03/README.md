@@ -10,7 +10,11 @@
 
 # Questão 03:
 
-- Saída do Console: 
+- Saída do Console:
+
+<p align="center">
+  <img width="814" height="310" src="https://user-images.githubusercontent.com/114815898/215293537-1b798a23-2ac2-436a-bb3c-fe13f23113ec.png">
+</p>
 
 ---
 
