@@ -1,6 +1,6 @@
 # Questão 02:
 
-![OUTPUT] (Laboratório - 03/IMAGENS/Saída Questão 02.png)
+![OUTPUT] (Laboratório - 03/IMAGENS/Saída Questão 02.png);
 
 ---
 
