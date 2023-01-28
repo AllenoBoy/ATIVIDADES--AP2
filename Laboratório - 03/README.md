@@ -28,13 +28,7 @@
 
 ---
 
-# Questão 05:
-
-- Saída do Console: 
-
----
-
-# Questão 06:
+# Questão 05 e 06:
 
 - Saída do Console: 
 
