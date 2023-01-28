@@ -1,6 +1,6 @@
 # Questão 02:
 
-<img src="Laboratório - 03/IMAGENS/output_q2.png" alt="OUTPUT"/>
+<img src="Laboratório - 03/output_q2.png" alt="OUTPUT"/>
 
 ---
 
