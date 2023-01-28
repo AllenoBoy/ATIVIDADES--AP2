@@ -1,6 +1,10 @@
 # Questão 02:
 
-![output_q2](https://user-images.githubusercontent.com/114815898/215292365-a955898e-cf33-4ea2-b1a1-93950ccc2e93.png)
+- Saída do Console: 
+
+<p align="center">
+  <img width="316" height="341" src="https://user-images.githubusercontent.com/114815898/215292577-e9ea6a35-ef0e-49df-bbff-d9dfab804a94.png">
+</p>
 
 ---
 
