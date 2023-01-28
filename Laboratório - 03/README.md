@@ -10,24 +10,36 @@
 
 # Questão 03:
 
+- Saída do Console: 
+
 ---
 
 # Questão 04:
+
+- Saída do Console: 
 
 ---
 
 # Questão 05:
 
+- Saída do Console: 
+
 ---
 
 # Questão 06:
+
+- Saída do Console: 
 
 ---
 
 # Questão 07:
 
+- Saída do Console: 
+
 ---
 
 # Questão 08:
+
+- Saída do Console: 
 
 ---
