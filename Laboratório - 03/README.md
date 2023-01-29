@@ -77,7 +77,7 @@
 
 > 4ª ALUNO:
 <p align="center">
-  <img width="963height="183src="https://user-images.githubusercontent.com/114815898/215327046-0a896676-287d-4bcd-99a9-7a86b79e98de.png">
+  <img width="963" height="183" src="https://user-images.githubusercontent.com/114815898/215327046-0a896676-287d-4bcd-99a9-7a86b79e98de.png">
 </p>
 
 > 5ª ALUNO:
