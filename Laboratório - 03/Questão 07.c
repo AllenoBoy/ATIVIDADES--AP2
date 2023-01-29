@@ -32,25 +32,25 @@ int main (void)
 
     /* PREENCHIMENTO DAS 2 STRUCTS */
 
-    // INFO USU¡RIO
-        strcpy ( inf.end.rua , "Rua Riachuelo, Setor - Samuel Grahan (JataÌ - GO)");
-        strcpy ( inf.end.num , "n∞ 1530");
+    // INFO USU√ÅRIO
+        strcpy ( inf.end.rua , "Rua Riachuelo, Setor - Samuel Grahan (Jata√≠ - GO)");
+        strcpy ( inf.end.num , "n¬∞ 1530");
         strcpy ( inf.end.cep , "75804-020");
 
     // SALDO E NOME
-        strcpy ( inf.nome , "Ivete de Abra„o Sales ChaminÈ");
+        strcpy ( inf.nome , "Ivete de Abra√£o Sales Chamin√©");
         strcpy ( inf.sald , "R$ 29.175.140,22");
 
-    /* DISPLAY DAS INFORMA«’ES PREENCHIDAS */
+    /* DISPLAY DAS INFORMA√á√ïES PREENCHIDAS */
 
     printf ("-----------------------------------------");
-    printf ("\n\n - INFORMA«’ES DO BANCO ARROZ AMARELO -\n\n");
+    printf ("\n\n - INFORMA√á√ïES DO BANCO ARROZ AMARELO -\n\n");
     printf ("-----------------------------------------\n");
 
     printf ("\n 1. Nome do Cliente = %s\n", inf.nome);
     printf ("\n 2. Dados do Cliente { ");
     printf ("\n\t\t       2.1 RUA = %s", inf.end.rua);
-    printf ("\n\t\t       2.2 N⁄M = %s ", inf.end.num);
+    printf ("\n\t\t       2.2 N√öM = %s ", inf.end.num);
     printf ("\n\t\t       2.3 CEP = %s", inf.end.cep);
     printf ("\n\t\t     }\n");
     printf ("\n 3. Saldo do Cliente: %s\n\n", inf.sald);
