@@ -30,7 +30,19 @@
 
 # Questão 05 e 06:
 
-- Saída do Console: 
+- Saída do Console:
+
+**> Exemplo de Possível Entrada:**
+
+<p align="center">
+  <img width="957" height="350" src="https://user-images.githubusercontent.com/114815898/215297309-718975ab-8342-4985-a9c8-366c458128a7.png">
+</p>
+
+**> Saída:**
+
+<p align="center">
+  <img width="366" height="401" src="https://user-images.githubusercontent.com/114815898/215297304-14777c2d-7466-4dcb-b1a5-8a96fe956f27.png">
+</p>
 
 ---
 
