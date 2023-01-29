@@ -56,6 +56,16 @@
 
 # Questão 08:
 
-- Saída do Console: 
+**> Exemplo de Possível Entrada:**
+
+<p align="center">
+  <img width="957" height="350" src="https://user-images.githubusercontent.com/114815898/215297309-718975ab-8342-4985-a9c8-366c458128a7.png">
+</p>
+
+**> Saída:**
+
+<p align="center">
+  <img width="370" height="399" src="https://user-images.githubusercontent.com/114815898/215297844-c76cee83-4dc0-4c64-a22b-186d093d4eb9.png">
+</p>
 
 ---
