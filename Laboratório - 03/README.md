@@ -30,8 +30,6 @@
 
 # Questão 05 e 06:
 
-- Saída do Console:
-
 **> Exemplo de Possível Entrada:**
 
 <p align="center">
