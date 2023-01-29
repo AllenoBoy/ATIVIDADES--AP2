@@ -48,6 +48,10 @@
 
 - Saída do Console: 
 
+<p align="center">
+  <img width="661" height="247" src="https://user-images.githubusercontent.com/114815898/215298772-056207e7-9e0f-4306-8f60-9b9259de14a7.png">
+</p>
+
 ---
 
 # Questão 08:
