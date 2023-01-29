@@ -41,7 +41,7 @@
 **> Saída:**
 
 <p align="center">
-  <img width="366" height="401" src="https://user-images.githubusercontent.com/114815898/215297304-14777c2d-7466-4dcb-b1a5-8a96fe956f27.png">
+  <img width="370" height="399" src="https://user-images.githubusercontent.com/114815898/215297844-c76cee83-4dc0-4c64-a22b-186d093d4eb9.png">
 </p>
 
 ---
