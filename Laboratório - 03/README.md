@@ -58,14 +58,36 @@
 
 **> Exemplo de Possível Entrada:**
 
+> 1ª ALUNO:
 <p align="center">
-  <img width="957" height="350" src="https://user-images.githubusercontent.com/114815898/215297309-718975ab-8342-4985-a9c8-366c458128a7.png">
+  <img width="960" height="179" src="https://user-images.githubusercontent.com/114815898/215326935-f091b325-ad35-4300-8cb3-2bbfd0de8f82.png">
+</p>
+
+> 2ª ALUNO:
+
+<p align="center">
+  <img width="962" height="185" src="https://user-images.githubusercontent.com/114815898/215326972-00153b02-ac18-44b6-ace8-13a8d08e70fc.png">
+</p>
+
+> 3ª ALUNO:
+<p align="center">
+  <img width="960" height="183" src="https://user-images.githubusercontent.com/114815898/215326997-0ca571e5-fda5-4258-9833-cf776e3abfad.png">
+</p>
+
+> 4ª ALUNO:
+<p align="center">
+  <img width="963height="183src="https://user-images.githubusercontent.com/114815898/215327046-0a896676-287d-4bcd-99a9-7a86b79e98de.png">
+</p>
+
+> 5ª ALUNO:
+<p align="center">
+  <img width="961" height="180"  src="https://user-images.githubusercontent.com/114815898/215327106-62edde40-9e07-4acf-9715-d21fb3c82fbf.png">
 </p>
 
 **> Saída:**
 
 <p align="center">
-  <img width="370" height="399" src="https://user-images.githubusercontent.com/114815898/215297844-c76cee83-4dc0-4c64-a22b-186d093d4eb9.png">
+  <img width="965" height="337" src="https://user-images.githubusercontent.com/114815898/215326855-9f47f335-c2c9-4e3b-9237-9390f5dd3d6b.png">
 </p>
 
 ---
