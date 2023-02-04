@@ -1,6 +1,6 @@
 ## REPOSITÓRIO COM AS ATIVIDADES DE LABORATÓRIO DE AP2
 
-> IDE: Code::Blocks usada até Laboratório 03.
+> IDE: Code::Blocks.
 
 > GCC: (Tdm64 -1) 10.3.0 // Não é a padrão do code::blocks (é a mesma do dev c++).
 
