@@ -4,7 +4,7 @@
    # include <locale.h>
 
 // EXTERN LIBRARY
-   # include "EXTRN_PROBLMS.h"
+   # include "biblioteca.h"
 
 // GLOBAL VARIABLES
    int MENU_SET;
