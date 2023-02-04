@@ -1,6 +1,6 @@
 # include <stdio.h>
 # include <stdlib.h>
-# include "EXTRN_PROBLMS.h"
+# include "biblioteca.h"
 
 // THE NUMBER IS POSITIVE OR NEGATIVE?
 int posORneg ()
