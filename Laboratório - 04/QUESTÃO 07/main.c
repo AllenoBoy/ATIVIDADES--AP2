@@ -1,4 +1,4 @@
-// DEFAULT HEADER FILES: 
+// DEFAULT HEADER FILES:
    # include <stdio.h>
    # include <stdlib.h>
    # include <locale.h>
@@ -9,14 +9,14 @@ void LeAluno ();
 void ImprimeTurma ();
 float CalculaMediaAluno ();
 
-void fillup (); 
+void fillup ();
 
 /* --------------------------------------------------------------------------------------------------- */
 
 // DATA TYPE
 typedef struct
 {
-  
+
   int matricula;
   float notas[3];
   float set;
@@ -52,10 +52,10 @@ int main(void)
 void LeAluno ()
 {
     system ("CLS");
-    printf ("\n # Insira a matrícula do aluno %d = ", pos); scanf ("%d", &Turma[i].matricula); setbuf (stdin, NULL);
-    printf ("\n - Insira a 1ª nota do aluno %d = ", pos);  scanf ("%f", &Turma[i].notas[0]); setbuf (stdin, NULL);
-    printf ("\n - Insira a 2ª nota do aluno %d = ", pos);    scanf ("%f", &Turma[i].notas[1]); setbuf (stdin, NULL);
-    printf ("\n - Insira a 3ª nota do aluno %d = ", pos);    scanf ("%f", &Turma[i].notas[2]); setbuf (stdin, NULL);
+    printf ("\n # Insira a matrícula do aluno %d = ", pos);  scanf ("%d", &Turma[i].matricula);    setbuf (stdin, NULL);
+    printf ("\n - Insira a 1ª nota do aluno %d = ", pos);    scanf ("%f", &Turma[i].notas[0]);     setbuf (stdin, NULL);
+    printf ("\n - Insira a 2ª nota do aluno %d = ", pos);    scanf ("%f", &Turma[i].notas[1]);     setbuf (stdin, NULL);
+    printf ("\n - Insira a 3ª nota do aluno %d = ", pos);    scanf ("%f", &Turma[i].notas[2]);     setbuf (stdin, NULL);
     pos++;
 }
 
@@ -103,4 +103,3 @@ void fillup ()
     Turma[3].notas[0] = 4.2; Turma[3].notas[1] = 6.7; Turma[3].notas[2] = 9.0;
     Turma[4].notas[0] = 8.9; Turma[4].notas[1] = 3.5; Turma[4].notas[2] = 7.4;
 }
-
